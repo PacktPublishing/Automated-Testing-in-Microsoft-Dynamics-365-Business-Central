@@ -181,8 +181,7 @@ codeunit 81003 "LookupValue Warehouse Shipment"
     var
         SalesLine: record "Sales Line";
     begin
-        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, '');
-        CreateSalesLine(SalesHeader, SalesLine, SalesLine.Type::Item, '', 1, Location."Code");
+        LibrarySales.CreateSalesDocumentWithItem(SalesHeader, SalesLine, SalesHeader."Document Type"::Order, '', '', 1, Location."Code", 0D);
 
         with SalesHeader do
             if WithLookupValue then begin
@@ -191,18 +190,6 @@ codeunit 81003 "LookupValue Warehouse Shipment"
             end;
 
         LibrarySales.ReleaseSalesDocument(SalesHeader);
-    end;
-
-    local procedure CreateSalesLine(var SalesHeader: Record "Sales Header"; var SalesLine: Record "Sales Line"; Type: Option; ItemNo: Code[20]; Qty: Decimal; LocationCode: Code[10]);
-    begin
-        LibrarySales.CreateSalesLine(SalesLine, SalesHeader, Type, ItemNo, Qty);
-        with SalesLine do begin
-            Validate("Location Code", LocationCode);
-            Validate("Qty. to Ship", Qty);
-            Validate("Qty. to Invoice", Qty);
-            Validate("Unit Price", LibraryRandom.RandInt(50));
-            Modify(true);
-        end;
     end;
 
     local procedure FindWarehouseShipmentLine(var WarehouseShipmentLine: Record "Warehouse Shipment Line"; SourceNo: Code[20])
