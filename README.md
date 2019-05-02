@@ -48,11 +48,11 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 
 ### Related products <Other books you may enjoy>
-*Implementing Microsoft Dynamics 365 Business Central On-Premise [[Packt]](https://prod.packtpub.com/in/application-development/implementing-microsoft-dynamics-365-business-central-premise-fourth-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788293778) [[Amazon]](https://www.amazon.com/dp/1789133939)
+* Implementing Microsoft Dynamics 365 Business Central On-Premise [[Packt]](https://prod.packtpub.com/in/application-development/implementing-microsoft-dynamics-365-business-central-premise-fourth-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788293778) [[Amazon]](https://www.amazon.com/dp/1789133939)
 
 * Microsoft Dynamics 365 Enterprise Edition – Financial Management (Third Edition) [[Packt]](https://prod.packtpub.com/in/application-development/microsoft-dynamics-365-enterprise-edition-financial-management?utm_source=github&utm_medium=repository&utm_campaign=9781785280009) [[Amazon]](https://www.amazon.com/dp/1788839293)
 
-## Get to Know the Author(s)
+## Get to Know the Author
 **Luc van Vugt**
 In 1999, Luc van Vugt stepped into the NAV world, training hundreds of developers. After Microsoft acquired Navision, he joined Dynamics localization team GDL as tester, UA specialist, and project lead. For 6 years, he was closely involved with all successive releases. Since he left Microsoft, he has become an active community member by means of his blog. He is also co-founder of Dutch Dynamics Community and a speaker at conferences. For this, he has been awarded MS MVP since 2011. In 2014, he co-founded NAV Skills, supporting NAV pros around the globe with, among other things, webinars. In 2012, Luc started fluxxus.nl, doing miscellaneous projects, including NAV development courses and workshops on design patterns, and automated testing.
 
