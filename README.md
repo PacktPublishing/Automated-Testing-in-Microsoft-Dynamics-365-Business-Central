@@ -1,8 +1,8 @@
 # Automated Testing in Microsoft Dynamics 365 Business Central
 
-<a href="Packt UTM URL of the Book"><img src="Cover Image URL of the Book" alt="Book Name" height="256px" align="right"></a>
+<a href="https://prod.packtpub.com/in/automated-testing-in-microsoft-dynamics-365-business-central?utm_source=github&utm_medium=repository&utm_campaign=9781789804935"><img src="Cover Image URL of the Book" alt="Book Name" height="256px" align="right"></a>
 
-This is the code repository for [Automated Testing in Microsoft Dynamics 365 Business Central](Packt UTM URL of the Book), published by Packt.
+This is the code repository for [Automated Testing in Microsoft Dynamics 365 Business Central](https://prod.packtpub.com/in/automated-testing-in-microsoft-dynamics-365-business-central?utm_source=github&utm_medium=repository&utm_campaign=9781789804935), published by Packt.
 
 **Efficiently automate test cases in Dynamics NAV and Business Central**
 
