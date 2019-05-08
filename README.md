@@ -39,10 +39,9 @@ With the following software and hardware list you can run all code files present
 
 ### Software and Hardware List
 
-| Chapter  | Software required                   | OS required                        |
-| -------- | ------------------------------------| -----------------------------------|
-| 1-9      | Microsoft Dynamics 365, Business    |                                    |
-|          |  Central                            | Windows, Mac OS X, and Linux (Any) |
+| Chapter  | Software required                          | OS required                        |
+| -------- | -----------------------------------------  | -----------------------------------|
+| 1-9      | Microsoft Dynamics 365, Business Central   | Windows, Mac OS X, and Linux (Any) |
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781789804935_ColorImages.pdf).
 
