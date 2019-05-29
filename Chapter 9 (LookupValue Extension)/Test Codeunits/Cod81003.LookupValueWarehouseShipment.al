@@ -141,10 +141,12 @@ codeunit 81003 "LookupValue Warehouse Shipment"
     local procedure Initialize()
     var
         WarehouseEmployee: Record "Warehouse Employee";
+        LibraryTestsSetup: Codeunit "Library - Tests Setup";
     begin
         if isInitialized then
             exit;
 
+        LibraryTestsSetup.SetSkipOnAfterCreateCustomer(true);
         LookupValueCode := LibraryLookupValue.CreateLookupValueCode();
         LibraryWarehouse.CreateLocationWMS(DefaultLocation, false, false, false, false, true);
         LibraryWarehouse.CreateWarehouseEmployee(WarehouseEmployee, DefaultLocation."Code", false);
