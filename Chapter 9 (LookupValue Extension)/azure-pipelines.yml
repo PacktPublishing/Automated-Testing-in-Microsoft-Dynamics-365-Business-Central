@@ -58,7 +58,7 @@ steps:
     testfilter: '81000..'
     failed_test_action: 'Ignore'
   continueOnError: true
-  timeoutInMinutes: 0
+  timeoutInMinutes: 360
 
 - task: PublishTestResults@2
   displayName: 'Publish Test Results **/TestResults.xml'
