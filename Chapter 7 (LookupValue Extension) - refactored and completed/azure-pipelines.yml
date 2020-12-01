@@ -19,6 +19,7 @@ steps:
   inputs:
     artifactversion: '14'
     artifactcountry: 'w1'
+    includetesttoolkit: true
 
 - task: ALOpsDockerStart@1
   displayName: 'ALOPS - Start Docker Container' # No need to provide any details - it will get the details from previous step
@@ -33,24 +34,6 @@ steps:
   inputs:
     usedocker: true
     license_path: '$(LuxBeheerBcDevLicense)'
-
- #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-- task: ALOpsAppPublish@1
-  displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
-  inputs:
-    usedocker: true
-    installaltesttool: true
-    skip_verification: true
-    install_al_app_names: |
-     Tests-TestLibraries
-     System Application Test
-     System Application Test Library
-     Any
-     Library Assert
-     Test Runner
-
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 - task: ALOpsAppCompiler@1
   displayName: 'ALOPS - Compile Extension: App'
