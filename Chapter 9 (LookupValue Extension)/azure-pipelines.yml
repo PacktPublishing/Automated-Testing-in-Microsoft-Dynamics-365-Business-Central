@@ -1,9 +1,9 @@
 name: $(Build.BuildId)
 
-# trigger:
-#  branches:
-#    include:
-#      - master
+trigger:
+ branches:
+   include:
+     - master/Chapter-9-(LookupValue-Extension)
 
 variables:
 - group: 'PipelineVariables'
@@ -17,7 +17,8 @@ steps:
 - task: ALOpsDockerCreate@1
   displayName: 'ALOPS - Create Docker Image' # It will reuse the image if already exists, or build one if it doesn't.
   inputs:
-    artifacttype: Sandbox
+    artifactversion: '14'
+    artifactcountry: 'w1'
 
 - task: ALOpsDockerStart@1
   displayName: 'ALOPS - Start Docker Container' # No need to provide any details - it will get the details from previous step
@@ -32,24 +33,6 @@ steps:
   inputs:
     usedocker: true
     license_path: '$(LuxBeheerBcDevLicense)'
-
- #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-- task: ALOpsAppPublish@1
-  displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
-  inputs:
-    usedocker: true
-    installaltesttool: true
-    skip_verification: true
-    install_al_app_names: |
-     Tests-TestLibraries
-     System Application Test
-     System Application Test Library
-     Any
-     Library Assert
-     Test Runner
-
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 - task: ALOpsAppCompiler@1
   displayName: 'ALOPS - Compile Extension: App'
@@ -72,10 +55,7 @@ steps:
   displayName: 'ALOPS - Run TestSuite'
   inputs:
     usedocker: true
-    import_action: "Skip"
-    import_testtoolkit: false
-    testpage: '130455'
-    testsuite: 'DEFAULT'
+    testfilter: '81000..81099'
     failed_test_action: 'Ignore'
   continueOnError: true   
 
