@@ -8,7 +8,7 @@ name: $(Build.BuildId)
 variables:
 - group: 'PipelineVariables'
 
-pool: TestAutomationExamples
+pool: default
 
 steps:
 - checkout: self
