@@ -1,9 +1,9 @@
 name: $(Build.BuildId)
 
-# trigger:
-#  branches:
-#    include:
-#      - master
+trigger:
+ branches:
+   include:
+     - master/Chapter-7-(LookupValue-Extension)-refactored-and-completed
 
 variables:
 - group: 'PipelineVariables'
