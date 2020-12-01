@@ -19,7 +19,6 @@ steps:
   inputs:
     artifactversion: '14'
     artifactcountry: 'w1'
-    includetesttoolkit: true
 
 - task: ALOpsDockerStart@1
   displayName: 'ALOPS - Start Docker Container' # No need to provide any details - it will get the details from previous step
@@ -56,10 +55,7 @@ steps:
   displayName: 'ALOPS - Run TestSuite'
   inputs:
     usedocker: true
-    import_action: "Skip"
-    import_testtoolkit: false
-    testpage: '130409'
-    testsuite: 'DEFAULT'
+    testfilter: '81000..81099'
     failed_test_action: 'Ignore'
   continueOnError: true   
 
