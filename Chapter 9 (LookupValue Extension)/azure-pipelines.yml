@@ -55,7 +55,6 @@ steps:
   displayName: 'ALOPS - Run TestSuite'
   inputs:
     usedocker: true
-    testfilter: '81000..81099'
     failed_test_action: 'Ignore'
   continueOnError: true   
 
