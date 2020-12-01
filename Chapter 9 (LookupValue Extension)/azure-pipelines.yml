@@ -57,7 +57,8 @@ steps:
     usedocker: true
     testfilter: '81000..'
     failed_test_action: 'Ignore'
-  continueOnError: true   
+  continueOnError: true
+  timeoutInMinutes: 0
 
 - task: PublishTestResults@2
   displayName: 'Publish Test Results **/TestResults.xml'
