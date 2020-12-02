@@ -24,9 +24,8 @@ codeunit 80010 "Library - Tests Setup"
     var
         TestsSetup: Record TestsSetup;
     begin
-        with TestsSetup do begin
-            Get();
-            exit("Skip OnAfterCreateCustomer");
-        end;
+        with TestsSetup do
+            if Get() then
+                exit("Skip OnAfterCreateCustomer")
     end;
 }
