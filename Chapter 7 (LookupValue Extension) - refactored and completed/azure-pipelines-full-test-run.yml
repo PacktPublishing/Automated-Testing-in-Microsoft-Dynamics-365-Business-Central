@@ -3,7 +3,7 @@ name: $(Build.BuildId)
 trigger:
  branches:
    include:
-     - master/Chapter-9-(LookupValue-Extension)
+     - master/Chapter-7-(LookupValue-Extension)-refactored-and-completed
 
 variables:
 - group: 'PipelineVariables'
@@ -44,7 +44,7 @@ jobs:
     inputs:
       usedocker: true
       nav_app_version: '1.0.[yyyyWW].*'
-      targetproject: 'Chapter 9 (LookupValue Extension)/app.json'
+      targetproject: 'Chapter 7 (LookupValue Extension) - refactored and completed/app.json'
       app_file_suffix: '_APP'                                 # A trick to uniquely identify the APP (from the TEST-app)
 
   - task: ALOpsAppPublish@1
